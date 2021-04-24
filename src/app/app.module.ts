@@ -11,12 +11,10 @@ import { UsersComponent } from './users/users.component';
     AppComponent,
     NavbarComponent,
     SidebarComponent,
-    UsersComponent
+    UsersComponent,
   ],
-  imports: [
-    BrowserModule
-  ],
+  imports: [BrowserModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

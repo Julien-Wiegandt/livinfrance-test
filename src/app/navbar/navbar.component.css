@@ -25,6 +25,10 @@ input {
   color: white;
 }
 
+.dropdown button:hover {
+  color: black;
+}
+
 .navbar-toggler {
   color: aliceblue;
 }

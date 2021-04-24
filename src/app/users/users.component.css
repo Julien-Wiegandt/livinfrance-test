@@ -1,0 +1,21 @@
+.status span {
+  width: 70px;
+}
+
+.activeStatus {
+  color: green;
+  background-color: rgba(0, 128, 0, 0.3);
+}
+
+.inactiveStatus {
+  color: crimson;
+  background-color: rgba(220, 20, 60, 0.3);
+}
+
+td {
+  vertical-align: middle !important;
+}
+
+th {
+  color: darkgrey;
+}

@@ -1,1 +1,44 @@
-<p>users works!</p>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Photo</th>
+      <th scope="col">Member name</th>
+      <th scope="col">Mobile</th>
+      <th scope="col">Email</th>
+      <th scope="col">Status</th>
+      <th scope="col">Operation</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users; let i = index">
+      <td>
+        <img
+          src="../../assets/images/{{ user.photo }}"
+          class="rounded float-start"
+          alt="User avatar"
+          width="40"
+          height="40"
+        />
+      </td>
+      <td>{{ user.name }}</td>
+      <td>{{ user.mobile }}</td>
+      <td>{{ user.email }}</td>
+      <td class="status">
+        <span *ngIf="user.status" class="badge rounded-pill activeStatus"
+          >Active</span
+        >
+
+        <span *ngIf="!user.status" class="badge rounded-pill inactiveStatus"
+          >Inactive</span
+        >
+      </td>
+      <td>
+        <button><i class="bi bi-door-closed-fill"></i></button
+        ><button><i class="bi bi-pencil-fill"></i></button
+        ><button><i class="bi bi-trash-fill"></i></button>
+      </td>
+      <td><button>Login</button></td>
+    </tr>
+  </tbody>
+</table>
