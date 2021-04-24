@@ -5,16 +5,20 @@
       <a href="#">Admin</a>
     </div>
     <div class="users-stats">
-      <p>Total members: 1000</p>
-      <p>Current used: 1800</p>
+      <p>Total members: <b>1000</b></p>
+      <p>Current used: <b>1800</b></p>
     </div>
   </div>
   <div class="second-row">
     <h3>Members</h3>
-    <button class="btn big-button">Add new</button>
-    <button class="btn btn-outline-secondary">Import members</button>
-    <button class="btn btn-outline-secondary">Export members (Excel)</button>
-    <div class="btn-group dropstart">
+    <button class="btn big-button margin-left">Add new</button>
+    <button class="btn btn-outline-secondary margin-left">
+      Import members
+    </button>
+    <button class="btn btn-outline-secondary margin-left">
+      Export members (Excel)
+    </button>
+    <div class="btn-group dropstart filter">
       <button
         type="button"
         class="btn big-button dropdown-toggle"
@@ -31,7 +35,7 @@
     </div>
   </div>
 
-  <div class="paper-box">
+  <div class="table-paper-box">
     <table class="table">
       <thead>
         <tr>
@@ -40,8 +44,8 @@
           <th>Mobile</th>
           <th>Email</th>
           <th>Status</th>
-          <th>Operation</th>
-          <th>Action</th>
+          <th class="center-column">Operation</th>
+          <th class="center-column">Action</th>
         </tr>
       </thead>
       <tbody>
@@ -67,12 +71,14 @@
               >Inactive</span
             >
           </td>
-          <td>
+          <td class="center-column">
             <button class="btn"><i class="bi bi-door-closed-fill"></i></button
             ><button class="btn"><i class="bi bi-pencil-fill"></i></button
             ><button class="btn"><i class="bi bi-trash-fill"></i></button>
           </td>
-          <td><button class="btn big-button">Login</button></td>
+          <td class="center-column">
+            <button class="btn big-button">Login</button>
+          </td>
         </tr>
       </tbody>
     </table>

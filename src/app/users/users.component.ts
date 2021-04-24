@@ -48,10 +48,38 @@ export class UsersComponent implements OnInit {
         status: true,
       },
       {
+        photo: 'user8-avatar.jpg',
+        name: 'Agnès Mailliu',
+        mobile: '+6 589 54 23',
+        email: 'mailliu@gmail.com',
+        status: true,
+      },
+      {
         photo: 'user2-avatar.jfif',
         name: 'Vanessa Paradi',
         mobile: '+6 874 54 75',
         email: 'paradi@gmail.com',
+        status: false,
+      },
+      {
+        photo: 'user9-avatar.jfif',
+        name: 'Sophie Miracle',
+        mobile: '+6 874 58 55',
+        email: 'miracle@gmail.com',
+        status: false,
+      },
+      {
+        photo: 'user10-avatar.jfif',
+        name: 'Catherine Jolie',
+        mobile: '+6 554 21 65',
+        email: 'jolie@gmail.com',
+        status: true,
+      },
+      {
+        photo: 'user11-avatar.jfif',
+        name: 'Josette Dupond',
+        mobile: '+9 547 87 64',
+        email: 'dupond@gmail.com',
         status: false,
       },
     ];

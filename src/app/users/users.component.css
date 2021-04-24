@@ -38,8 +38,19 @@ button i {
   color: white;
   background-color: blueviolet;
 }
-
 .paper-box {
+  background-color: white;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 11px 0px #d0d0d0;
+  -moz-box-shadow: 0px 0px 11px 0px #d0d0d0;
+  box-shadow: 0px 0px 11px 0px #d0d0d0;
+}
+
+.table-paper-box {
+  padding-left: 20px;
   background-color: white;
   border: 1px solid #ffffff;
   border-radius: 5px;
@@ -94,14 +105,31 @@ button i {
 .users-stats p {
   margin: 0;
   color: gray;
+  text-align: end;
 }
 
 .second-row {
-  margin: 10px 0 10px 0;
+  margin: 15px 0 15px 0;
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
 }
 
 .btn-outline-secondary {
   font-weight: 600;
+}
+
+.filter {
+  margin-left: auto;
+}
+
+.margin-left {
+  margin-left: 40px;
+}
+
+.center-column {
+  text-align: center;
+}
+
+table {
+  margin: 0px;
 }
