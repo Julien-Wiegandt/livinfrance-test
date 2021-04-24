@@ -1,7 +1,41 @@
 nav {
+  grid-template: 50px / 100px 1fr;
   background-color: blueviolet;
+  padding: 10px;
 }
 
-button {
+input {
+  width: 300px;
+}
+
+#notificationIcon {
   color: white;
+}
+
+#notificationIcon:hover {
+  color: black;
+}
+
+#searchInput {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.dropdown button {
+  color: white;
+}
+
+.navbar-toggler {
+  color: aliceblue;
+}
+
+@media screen and (max-width: 992px) {
+  /* #navContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  } */
+  #searchInput {
+    margin: 0px;
+  }
 }

@@ -1,60 +1,56 @@
-<nav class="navbar navbar-expand-lg navbar-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">
-      <img
-        src="../../assets/images/logo-livinfrance.png"
-        alt=""
-        width="100"
-        height="43"
-      />
-    </a>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navBarContent"
-      aria-controls="navBarContent"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon"></span>
+<nav class="navbar navbar-expand-lg">
+  <a href="#">
+    <img
+      src="../../assets/images/logo-livinfrance.png"
+      alt=""
+      width="100"
+      height="43"
+    />
+  </a>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-bs-toggle="collapse"
+    data-bs-target="#navContent"
+    aria-controls="navContent"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <i class="bi bi-list"></i>
+  </button>
+  <div class="collapse navbar-collapse" id="navContent">
+    <input
+      class="form-control"
+      id="searchInput"
+      type="text"
+      placeholder="Search..."
+    />
+    <button class="btn" id="notificationIcon">
+      <i class="bi bi-bell-fill"></i>
+      <span class="badge bg-danger">1</span>
     </button>
-    <div class="collapse navbar-collapse" id="navBarContent">
-      <div class="navbar-nav">
-        <form class="navbar-form">
-          <input
-            class="form-control"
-            type="search"
-            placeholder="Search..."
-            aria-label="Search"
-          />
-        </form>
-        <div class="nav-item">
-          <div class="dropdown">
-            <img
-              src="../../assets/images/user1-avatar.jfif"
-              class="rounded float-start"
-              alt="User avatar"
-              width="40"
-              height="40"
-            />
-            <button
-              class="btn dropdown-toggle"
-              type="button"
-              id="dropdownMenuButton1"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              Luke Asote
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
+    <img
+      src="../../assets/images/user1-avatar.jfif"
+      class="rounded float-start"
+      alt="User avatar"
+      width="40"
+      height="40"
+    />
+    <div class="dropdown">
+      <button
+        class="btn dropdown-toggle"
+        type="button"
+        id="dropdownMenuButton1"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+      >
+        Julien Wiegandt
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+        <li><a class="dropdown-item" href="#">Profile</a></li>
+        <li><a class="dropdown-item" href="#">Settings</a></li>
+        <li><a class="dropdown-item" href="#">Logout</a></li>
+      </ul>
     </div>
   </div>
 </nav>

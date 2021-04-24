@@ -1,0 +1,41 @@
+a {
+  display: grid;
+  grid-template: 100% / 1fr 1fr 4fr;
+  text-decoration: none;
+  color: white;
+  height: 50px;
+}
+
+i {
+  grid-column: 2;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+p {
+  grid-column: 3;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.line {
+  grid-column: 1;
+  width: 4px;
+}
+
+a:hover {
+  background-color: rgb(134, 91, 173);
+}
+
+a:hover .line {
+  background-color: white;
+}
+
+.sidebar {
+  width: 280px;
+  height: 100%;
+  background-color: rgb(153, 43, 226);
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+}
