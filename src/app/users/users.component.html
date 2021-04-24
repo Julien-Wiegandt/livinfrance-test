@@ -1,44 +1,80 @@
-<table class="table">
-  <thead>
-    <tr>
-      <th scope="col">Photo</th>
-      <th scope="col">Member name</th>
-      <th scope="col">Mobile</th>
-      <th scope="col">Email</th>
-      <th scope="col">Status</th>
-      <th scope="col">Operation</th>
-      <th scope="col">Action</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let user of users; let i = index">
-      <td>
-        <img
-          src="../../assets/images/{{ user.photo }}"
-          class="rounded float-start"
-          alt="User avatar"
-          width="40"
-          height="40"
-        />
-      </td>
-      <td>{{ user.name }}</td>
-      <td>{{ user.mobile }}</td>
-      <td>{{ user.email }}</td>
-      <td class="status">
-        <span *ngIf="user.status" class="badge rounded-pill activeStatus"
-          >Active</span
-        >
+<div class="users-app">
+  <div class="first-row">
+    <div class="role-selector paper-box">
+      <a href="#">Members</a>
+      <a href="#">Admin</a>
+    </div>
+    <div class="users-stats">
+      <p>Total members: 1000</p>
+      <p>Current used: 1800</p>
+    </div>
+  </div>
+  <div class="second-row">
+    <h3>Members</h3>
+    <button class="btn big-button">Add new</button>
+    <button class="btn btn-outline-secondary">Import members</button>
+    <button class="btn btn-outline-secondary">Export members (Excel)</button>
+    <div class="btn-group dropstart">
+      <button
+        type="button"
+        class="btn big-button dropdown-toggle"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+      >
+        Filter
+      </button>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">All</a></li>
+        <li><a class="dropdown-item" href="#">Active</a></li>
+        <li><a class="dropdown-item" href="#">Inactive</a></li>
+      </ul>
+    </div>
+  </div>
 
-        <span *ngIf="!user.status" class="badge rounded-pill inactiveStatus"
-          >Inactive</span
-        >
-      </td>
-      <td>
-        <button><i class="bi bi-door-closed-fill"></i></button
-        ><button><i class="bi bi-pencil-fill"></i></button
-        ><button><i class="bi bi-trash-fill"></i></button>
-      </td>
-      <td><button>Login</button></td>
-    </tr>
-  </tbody>
-</table>
+  <div class="paper-box">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Photo</th>
+          <th>Member name</th>
+          <th>Mobile</th>
+          <th>Email</th>
+          <th>Status</th>
+          <th>Operation</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users; let i = index">
+          <td>
+            <img
+              src="../../assets/images/{{ user.photo }}"
+              class="rounded float-start"
+              alt="User avatar"
+              width="40"
+              height="40"
+            />
+          </td>
+          <td>{{ user.name }}</td>
+          <td>{{ user.mobile }}</td>
+          <td>{{ user.email }}</td>
+          <td class="status">
+            <span *ngIf="user.status" class="badge rounded-pill activeStatus"
+              >Active</span
+            >
+
+            <span *ngIf="!user.status" class="badge rounded-pill inactiveStatus"
+              >Inactive</span
+            >
+          </td>
+          <td>
+            <button class="btn"><i class="bi bi-door-closed-fill"></i></button
+            ><button class="btn"><i class="bi bi-pencil-fill"></i></button
+            ><button class="btn"><i class="bi bi-trash-fill"></i></button>
+          </td>
+          <td><button class="btn big-button">Login</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
