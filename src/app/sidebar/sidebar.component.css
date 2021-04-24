@@ -33,7 +33,7 @@ a:hover .line {
 
 .sidebar {
   width: 280px;
-  height: 100%;
+  height: calc(100% - 63px);
   background-color: rgb(153, 43, 226);
   display: flex;
   flex-direction: column;
