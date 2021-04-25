@@ -5,6 +5,7 @@ export enum Sort {
   Down = 'down',
   No = 'no',
 }
+
 @Component({
   selector: 'app-users',
   templateUrl: './users.component.html',

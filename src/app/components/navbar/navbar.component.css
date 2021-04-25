@@ -35,10 +35,10 @@ input {
 
 @media screen and (max-width: 992px) {
   /* #navContent {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-  } */
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    } */
   #searchInput {
     margin: 0px;
   }
