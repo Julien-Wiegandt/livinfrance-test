@@ -33,13 +33,21 @@ input {
   color: aliceblue;
 }
 
-@media screen and (max-width: 992px) {
-  /* #navContent {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-    } */
+@media screen and (max-width: 991px) {
+  #notificationIcon {
+    display: none;
+  }
   #searchInput {
     margin: 0px;
+    width: 100%;
+  }
+  #navContent img {
+    display: none;
+  }
+  .dropdown button {
+    width: 100%;
+  }
+  .dropdown-menu {
+    width: 100%;
   }
 }
