@@ -133,3 +133,18 @@ button i {
 table {
   margin: 0px;
 }
+
+th button {
+  border-style: none;
+  background-color: white;
+  color: gray;
+  font-weight: normal;
+  width: 100%;
+  height: 100%;
+  text-align: start;
+}
+
+th button i {
+  position: absolute;
+  margin-left: 10px;
+}

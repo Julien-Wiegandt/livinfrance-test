@@ -34,16 +34,51 @@
       </ul>
     </div>
   </div>
-
   <div class="table-paper-box">
     <table class="table">
       <thead>
         <tr>
           <th>Photo</th>
-          <th>Member name</th>
-          <th>Mobile</th>
-          <th>Email</th>
-          <th>Status</th>
+          <th>
+            <button (click)="sortByMemberName()">
+              Member name
+              <i
+                *ngIf="sortedByMemberName === Sort.Down"
+                class="bi bi-arrow-down"
+              ></i>
+              <i
+                *ngIf="sortedByMemberName === Sort.Up"
+                class="bi bi-arrow-up"
+              ></i>
+            </button>
+          </th>
+          <th>
+            <button (click)="sortByMobile()">
+              Mobile<i
+                *ngIf="sortedByMobile === Sort.Down"
+                class="bi bi-arrow-down"
+              ></i>
+              <i *ngIf="sortedByMobile === Sort.Up" class="bi bi-arrow-up"></i>
+            </button>
+          </th>
+          <th>
+            <button (click)="sortByEmail()">
+              Email<i
+                *ngIf="sortedByEmail === Sort.Down"
+                class="bi bi-arrow-down"
+              ></i>
+              <i *ngIf="sortedByEmail === Sort.Up" class="bi bi-arrow-up"></i>
+            </button>
+          </th>
+          <th>
+            <button (click)="sortByStatus()">
+              Status<i
+                *ngIf="sortedByStatus === Sort.Down"
+                class="bi bi-arrow-down"
+              ></i>
+              <i *ngIf="sortedByStatus === Sort.Up" class="bi bi-arrow-up"></i>
+            </button>
+          </th>
           <th class="center-column">Operation</th>
           <th class="center-column">Action</th>
         </tr>

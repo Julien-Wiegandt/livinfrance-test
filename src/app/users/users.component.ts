@@ -1,5 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
+export enum Sort {
+  Up = 'up',
+  Down = 'down',
+  No = 'no',
+}
 @Component({
   selector: 'app-users',
   templateUrl: './users.component.html',
@@ -7,6 +12,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UsersComponent implements OnInit {
   users = [];
+  Sort = Sort;
+  sortedByMemberName: Sort;
+  sortedByMobile: Sort;
+  sortedByEmail: Sort;
+  sortedByStatus: Sort;
 
   constructor() {}
 
@@ -83,5 +93,64 @@ export class UsersComponent implements OnInit {
         status: false,
       },
     ];
+    this.sortedByMemberName = Sort.No;
+    this.sortedByMobile = Sort.No;
+    this.sortedByEmail = Sort.No;
+    this.sortedByStatus = Sort.No;
+  }
+
+  sortByMemberName() {
+    this.sortedByMobile = Sort.No;
+    this.sortedByEmail = Sort.No;
+    this.sortedByStatus = Sort.No;
+    if (
+      this.sortedByMemberName === Sort.No ||
+      this.sortedByMemberName === Sort.Up
+    ) {
+      this.sortedByMemberName = Sort.Down;
+      this.users.sort((a, b) => (a.name > b.name ? 1 : -1));
+    } else {
+      this.sortedByMemberName = Sort.Up;
+      this.users.sort((a, b) => (a.name < b.name ? 1 : -1));
+    }
+  }
+
+  sortByMobile() {
+    this.sortedByMemberName = Sort.No;
+    this.sortedByEmail = Sort.No;
+    this.sortedByStatus = Sort.No;
+    if (this.sortedByMobile === Sort.No || this.sortedByMobile === Sort.Up) {
+      this.sortedByMobile = Sort.Down;
+      this.users.sort((a, b) => (a.mobile > b.mobile ? 1 : -1));
+    } else {
+      this.sortedByMobile = Sort.Up;
+      this.users.sort((a, b) => (a.mobile < b.mobile ? 1 : -1));
+    }
+  }
+
+  sortByEmail() {
+    this.sortedByMobile = Sort.No;
+    this.sortedByMemberName = Sort.No;
+    this.sortedByStatus = Sort.No;
+    if (this.sortedByEmail === Sort.No || this.sortedByEmail === Sort.Up) {
+      this.sortedByEmail = Sort.Down;
+      this.users.sort((a, b) => (a.email > b.email ? 1 : -1));
+    } else {
+      this.sortedByEmail = Sort.Up;
+      this.users.sort((a, b) => (a.email < b.email ? 1 : -1));
+    }
+  }
+
+  sortByStatus() {
+    this.sortedByMobile = Sort.No;
+    this.sortedByMemberName = Sort.No;
+    this.sortedByEmail = Sort.No;
+    if (this.sortedByStatus === Sort.No || this.sortedByStatus === Sort.Up) {
+      this.sortedByStatus = Sort.Down;
+      this.users.sort((a, b) => (a.status > b.status ? 1 : -1));
+    } else {
+      this.sortedByStatus = Sort.Up;
+      this.users.sort((a, b) => (a.status < b.status ? 1 : -1));
+    }
   }
 }
