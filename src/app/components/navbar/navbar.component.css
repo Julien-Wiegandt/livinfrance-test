@@ -15,12 +15,37 @@ input {
   margin-left: auto;
 }
 
+.nav__button__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.nav__button__text p {
+  text-align: start;
+}
+
+.nav__button--flex {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
 .nav__button {
   color: var(--text__color-primary);
 }
 
 .nav__button:hover {
   color: black;
+}
+
+.nav__button p {
+  margin: 0;
+}
+
+.nav__button__user-title {
+  font-size: small;
 }
 
 .navbar-toggler {
