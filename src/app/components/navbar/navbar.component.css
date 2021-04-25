@@ -8,24 +8,16 @@ input {
   width: 300px;
 }
 
-#notificationIcon {
-  color: white;
-}
-
-#notificationIcon:hover {
-  color: black;
-}
-
-#searchInput {
+.nav__input--margin {
   margin-right: auto;
   margin-left: auto;
 }
 
-.dropdown button {
+.nav__button {
   color: white;
 }
 
-.dropdown button:hover {
+.nav__button:hover {
   color: black;
 }
 
@@ -34,13 +26,14 @@ input {
 }
 
 @media screen and (max-width: 991px) {
-  #notificationIcon {
+  .nav__icon {
     display: none;
   }
-  #searchInput {
+  .nav__input--margin {
     margin: 0px;
     width: 100%;
   }
+
   #navContent img {
     display: none;
   }

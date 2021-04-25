@@ -1,27 +1,27 @@
 <div class="users-app">
-  <div class="first-row">
-    <div class="role-selector paper-box">
+  <div class="block-1">
+    <div class="block-1__role-selector paper-box">
       <a href="#">Members</a>
       <a href="#">Admin</a>
     </div>
-    <div class="users-stats">
+    <div class="block-1__users-stats">
       <p>Total members: <b>1000</b></p>
       <p>Current used: <b>1800</b></p>
     </div>
   </div>
-  <div class="second-row">
+  <div class="block-2">
     <h3>Members</h3>
-    <button class="btn big-button margin-left">Add new</button>
-    <button class="btn btn-outline-secondary margin-left">
+    <button class="btn fill-button block-2__button--margin">Add new</button>
+    <button class="btn btn-outline-secondary block-2__button--margin">
       Import members
     </button>
-    <button class="btn btn-outline-secondary margin-left">
+    <button class="btn btn-outline-secondary block-2__button--margin">
       Export members (Excel)
     </button>
-    <div class="btn-group dropstart filter">
+    <div class="btn-group dropstart block-2__filter">
       <button
         type="button"
-        class="btn big-button dropdown-toggle"
+        class="btn fill-button dropdown-toggle"
         data-bs-toggle="dropdown"
         aria-expanded="false"
       >
@@ -34,7 +34,7 @@
       </ul>
     </div>
   </div>
-  <div class="table-paper-box">
+  <div class="paper-box paper-box__table--padding">
     <table class="table">
       <thead>
         <tr>
@@ -79,13 +79,13 @@
               <i *ngIf="sortedByStatus === Sort.Up" class="bi bi-arrow-up"></i>
             </button>
           </th>
-          <th class="center-column">Operation</th>
-          <th class="center-column">Action</th>
+          <th class="table__colomn-name--center">Operation</th>
+          <th class="table__colomn-name--center">Action</th>
         </tr>
       </thead>
       <tbody>
         <tr *ngFor="let user of users; let i = index">
-          <td class="avatar">
+          <td class="table__column__avatar">
             <img
               src="../../assets/images/{{ user.photo }}"
               class="rounded float-start"
@@ -97,22 +97,26 @@
           <td>{{ user.name }}</td>
           <td>{{ user.mobile }}</td>
           <td>{{ user.email }}</td>
-          <td class="status">
-            <span *ngIf="user.status" class="badge rounded-pill activeStatus"
+          <td class="table__status">
+            <span
+              *ngIf="user.status"
+              class="badge rounded-pill table__status-active"
               >Active</span
             >
 
-            <span *ngIf="!user.status" class="badge rounded-pill inactiveStatus"
+            <span
+              *ngIf="!user.status"
+              class="badge rounded-pill table__status-inactive"
               >Inactive</span
             >
           </td>
-          <td class="center-column">
+          <td class="table__colomn-name--center">
             <button class="btn"><i class="bi bi-door-closed-fill"></i></button
             ><button class="btn"><i class="bi bi-pencil-fill"></i></button
             ><button class="btn"><i class="bi bi-trash-fill"></i></button>
           </td>
-          <td class="center-column">
-            <button class="btn big-button">Login</button>
+          <td class="table__colomn-name--center">
+            <button class="btn fill-button">Login</button>
           </td>
         </tr>
       </tbody>

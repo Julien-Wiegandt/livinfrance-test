@@ -1,43 +1,74 @@
-.status span {
-  width: 70px;
+.users-app {
+  margin: 15px 30px 15px 15px;
 }
 
-.activeStatus {
-  color: green;
-  background-color: rgba(0, 128, 0, 0.3);
-}
-
-.inactiveStatus {
-  color: crimson;
-  background-color: rgba(220, 20, 60, 0.3);
-}
-
-td {
-  vertical-align: middle !important;
-}
-
-tbody,
-td,
-tfoot,
-th,
-thead,
-tr {
-  border-style: none;
-}
-
-th {
-  color: gray;
-  font-weight: normal;
-}
-
-button i {
-  color: blueviolet;
-}
-
-.big-button {
+.fill-button {
   color: white;
   background-color: blueviolet;
 }
+/* ################### Block 1 ################### */
+
+.block-1 {
+  display: flex;
+  height: 60px;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.block-1__role-selector {
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  margin-right: auto;
+  height: 100%;
+}
+
+.block-1__role-selector a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-decoration: none;
+  color: gray;
+  height: 100%;
+  padding: 10px;
+}
+
+.block-1__role-selector a:hover {
+  box-shadow: inset 0 -2px 0 0 blueviolet;
+  transition: box-shadow 0.4s ease-in-out;
+  color: black;
+  font-weight: 500;
+  transition: color 0.4s ease-in-out;
+}
+
+.block-1__users-stats {
+  height: 100%;
+}
+
+.block-1__users-stats p {
+  margin: 0;
+  color: gray;
+  text-align: end;
+}
+/* ################### Block 2 ################### */
+.block-2 {
+  margin: 15px 0 15px 0;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.btn-outline-secondary {
+  font-weight: 600;
+}
+
+.block-2__filter {
+  margin-left: auto;
+}
+
+.block-2__button--margin {
+  margin-left: 30px;
+}
+/* ################### Table ################### */
 .paper-box {
   background-color: white;
   border: 1px solid #ffffff;
@@ -49,89 +80,35 @@ button i {
   box-shadow: 0px 0px 11px 0px #d0d0d0;
 }
 
-.table-paper-box {
+.paper-box__table--padding {
   padding-left: 20px;
-  background-color: white;
-  border: 1px solid #ffffff;
-  border-radius: 5px;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -webkit-box-shadow: 0px 0px 11px 0px #d0d0d0;
-  -moz-box-shadow: 0px 0px 11px 0px #d0d0d0;
-  box-shadow: 0px 0px 11px 0px #d0d0d0;
-}
-
-.users-app {
-  margin: 15px 30px 15px 15px;
-}
-
-.first-row {
-  display: flex;
-  height: 60px;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-.role-selector {
-  width: 200px;
-  display: flex;
-  justify-content: center;
-  margin-right: auto;
-  height: 100%;
-}
-
-.role-selector a {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-decoration: none;
-  color: gray;
-  height: 100%;
-  padding: 10px;
-}
-
-.role-selector a:hover {
-  box-shadow: inset 0 -2px 0 0 blueviolet;
-  transition: box-shadow 0.4s ease-in-out;
-  color: black;
-  font-weight: 500;
-  transition: color 0.4s ease-in-out;
-}
-
-.users-stats {
-  height: 100%;
-}
-
-.users-stats p {
-  margin: 0;
-  color: gray;
-  text-align: end;
-}
-
-.second-row {
-  margin: 15px 0 15px 0;
-  display: flex;
-  justify-content: flex-start;
-}
-
-.btn-outline-secondary {
-  font-weight: 600;
-}
-
-.filter {
-  margin-left: auto;
-}
-
-.margin-left {
-  margin-left: 40px;
-}
-
-.center-column {
-  text-align: center;
+  padding-right: min(10px, 5%);
 }
 
 table {
   margin: 0px;
+}
+
+tbody,
+td,
+tfoot,
+th,
+thead,
+tr {
+  border-style: none;
+}
+
+td {
+  vertical-align: middle;
+}
+
+th {
+  color: gray;
+  font-weight: normal;
+}
+
+button i {
+  color: blueviolet;
 }
 
 th button {
@@ -149,8 +126,25 @@ th button i {
   margin-left: 10px;
 }
 
+.table__colomn-name--center {
+  text-align: center;
+}
+.table__status span {
+  width: 70px;
+}
+
+.table__status-active {
+  color: green;
+  background-color: rgba(0, 128, 0, 0.3);
+}
+
+.table__status-inactive {
+  color: crimson;
+  background-color: rgba(220, 20, 60, 0.3);
+}
+
 @media screen and (max-width: 900px) {
-  .avatar {
+  .table__column__avatar {
     display: none;
   }
 }
