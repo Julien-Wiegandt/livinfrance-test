@@ -79,20 +79,6 @@ export class UsersComponent implements OnInit {
         email: 'miracle@gmail.com',
         status: false,
       },
-      {
-        photo: 'user10-avatar.jfif',
-        name: 'Catherine Jolie',
-        mobile: '+6 554 21 65',
-        email: 'jolie@gmail.com',
-        status: true,
-      },
-      {
-        photo: 'user11-avatar.jfif',
-        name: 'Josette Dupond',
-        mobile: '+9 547 87 64',
-        email: 'dupond@gmail.com',
-        status: false,
-      },
     ];
     this.sortedByMemberName = Sort.No;
     this.sortedByMobile = Sort.No;
