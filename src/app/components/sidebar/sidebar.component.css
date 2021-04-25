@@ -1,6 +1,8 @@
+@import "../../theme.variables.css";
+
 .sidebar {
   height: 100%;
-  background-color: rgb(153, 43, 226);
+  background-color: var(--color-secondary);
   display: flex;
   flex-direction: column;
   padding-top: 20px;
@@ -10,12 +12,12 @@ a {
   display: grid;
   grid-template: 100% / 1fr 1fr 4fr;
   text-decoration: none;
-  color: white;
+  color: var(--text__color-primary);
   height: 50px;
 }
 
 a:hover {
-  background-color: rgb(134, 91, 173);
+  background-color: var(--color-secondary);
 }
 
 i {
@@ -36,7 +38,7 @@ p {
 }
 
 a:hover .sidebar__link__line {
-  background-color: white;
+  background-color: var(--text__color-primary);
 }
 
 @media screen and (max-width: 1080px) {

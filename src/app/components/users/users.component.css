@@ -1,10 +1,12 @@
+@import "../../theme.variables.css";
+
 .users-app {
   margin: 15px 30px 15px 15px;
 }
 
 .fill-button {
-  color: white;
-  background-color: blueviolet;
+  color: var(--text__color-primary);
+  background-color: var(--color-primary);
 }
 /* ################### Block 1 ################### */
 
@@ -28,13 +30,13 @@
   flex-direction: column;
   justify-content: center;
   text-decoration: none;
-  color: gray;
+  color: var(--text__color-secondary);
   height: 100%;
   padding: 10px;
 }
 
 .block-1__role-selector a:hover {
-  box-shadow: inset 0 -2px 0 0 blueviolet;
+  box-shadow: inset 0 -2px 0 0 var(--color-primary);
   transition: box-shadow 0.4s ease-in-out;
   color: black;
   font-weight: 500;
@@ -47,7 +49,7 @@
 
 .block-1__users-stats p {
   margin: 0;
-  color: gray;
+  color: var(--text__color-secondary);
   text-align: end;
 }
 /* ################### Block 2 ################### */
@@ -108,13 +110,13 @@ th {
 }
 
 button i {
-  color: blueviolet;
+  color: var(--color-primary);
 }
 
 th button {
   border-style: none;
   background-color: white;
-  color: gray;
+  color: var(--text__color-secondary);
   font-weight: normal;
   width: 100%;
   height: 100%;
@@ -134,13 +136,15 @@ th button i {
 }
 
 .table__status-active {
-  color: green;
-  background-color: rgba(0, 128, 0, 0.3);
+  color: #27ae60;
+  background-color: #27ae5f44;
+  font-weight: 500;
 }
 
 .table__status-inactive {
-  color: crimson;
-  background-color: rgba(220, 20, 60, 0.3);
+  color: #c0392b;
+  background-color: #c03a2b59;
+  font-weight: 500;
 }
 
 @media screen and (max-width: 900px) {

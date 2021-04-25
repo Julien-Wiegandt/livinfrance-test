@@ -1,6 +1,8 @@
+@import "../../theme.variables.css";
+
 nav {
   grid-template: 63px / 100px 1fr;
-  background-color: blueviolet;
+  background-color: var(--color-primary);
   padding: 10px;
 }
 
@@ -14,7 +16,7 @@ input {
 }
 
 .nav__button {
-  color: white;
+  color: var(--text__color-primary);
 }
 
 .nav__button:hover {
@@ -22,7 +24,7 @@ input {
 }
 
 .navbar-toggler {
-  color: aliceblue;
+  color: var(--text__color-primary);
 }
 
 @media screen and (max-width: 991px) {
