@@ -39,7 +39,7 @@ a:hover .line {
   padding-top: 20px;
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1080px) {
   a {
     grid-template: 100% / 1fr 5fr;
   }

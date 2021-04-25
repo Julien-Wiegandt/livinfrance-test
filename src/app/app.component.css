@@ -20,7 +20,7 @@ app-users {
   grid-column: 2;
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1080px) {
   .app {
     grid-template: 63px 1fr / 50px 1fr;
   }
