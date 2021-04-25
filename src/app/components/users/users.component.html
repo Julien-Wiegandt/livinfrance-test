@@ -38,7 +38,7 @@
     <table class="table">
       <thead>
         <tr>
-          <th>Photo</th>
+          <th class="avatar">Photo</th>
           <th>
             <button (click)="sortByMemberName()">
               Member name
@@ -85,7 +85,7 @@
       </thead>
       <tbody>
         <tr *ngFor="let user of users; let i = index">
-          <td>
+          <td class="avatar">
             <img
               src="../../assets/images/{{ user.photo }}"
               class="rounded float-start"
